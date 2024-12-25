@@ -1,0 +1,116 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+     
+}
+.container{
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 40px;
+    /* padding: 10px; */
+
+}
+
+header{
+    grid-area: header;
+    background-color: orange;
+    text-align: center;
+}
+
+nav{
+    grid-area: nav;
+    background-color: blue;   
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a{
+    color: white;
+}
+
+aside{
+    grid-area: aside;
+    background-color: greenyellow;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    height: fit-content;
+    margin-top: 40px;
+
+}
+
+aside h2{
+    text-align: center;
+}
+aside ul{
+    list-style-type: none;
+}
+
+aside ul li{
+    margin: 10px 0;
+}
+
+aside:hover{
+    transform: scale(1.1);
+}
+main{
+    grid-area: main;
+    padding: 20px;
+
+}
+main h1{
+    background-color: aqua;
+    text-align: center;
+}
+
+main ul{
+    list-style-type: none;
+    display: grid;
+  
+    grid-template-columns: repeat(auto-fit,minmax(150px,1fr));  
+    gap: 10px;   
+}
+
+figure{
+    text-align: center;
+    font-weight: bold;
+    
+}
+
+figure img{
+    width: 100%;
+    height: 100%;    
+}
+
+figure img:hover{
+    transform: scale(1.1);
+}
+
+figcaption.name{
+    font-size: 12px;
+    font-weight: bold;
+} 
+
+figcaption.price{
+    font-size: 12px;
+    font-weight: bold;
+} 
+
+footer{
+    grid-area: footer;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
